@@ -1,0 +1,195 @@
+\documentclass[12pt]{amsart}
+
+%Below are necessary packages for your course.
+\usepackage{amsfonts,latexsym,amsthm,amssymb,amsmath,amscd,euscript}
+\usepackage{mathrsfs,manfnt,enumitem,stmaryrd}
+\usepackage[super]{nth}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage{calc,color,relsize}
+\usepackage{amsxtra}
+%\usepackage{eucal}
+\usepackage[all]{xy}
+\usepackage{graphicx,mathabx}
+\usepackage[geometry]{ifsym}
+\usepackage{hyperref}
+    \hypersetup{colorlinks=true,citecolor=blue,urlcolor =black,linkbordercolor={1 0 0}}
+\usepackage{mathtools}
+%\usepackage{fc}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\textwidth=14.5cm \textheight=20.5cm
+ \oddsidemargin=1cm
+\evensidemargin=1cm
+
+\allowdisplaybreaks[1]
+
+%Below are the theorem, definition, example, lemma, etc. body types.
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{postulate}[theorem]{Postulate}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+
+%This is a list of new commands I defined to make your life easier. Use them as the occur in the course.
+\newcommand{\sub}{\operatorname{sub}}
+\newcommand{\quot}{\operatorname{quot}}
+\newcommand{\bw}{\bigwedge}
+\newcommand{\Avs}{\operatorname{Av}^{\operatorname{sign}}}
+\newcommand{\bad}{\operatorname{bad}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+%We can even define a new command for \newcommand!
+\newcommand\nc{\newcommand}
+\nc{\on}{\operatorname}
+\nc\renc{\renewcommand}
+\nc{\BR}{\mathbb R}
+\nc{\BC}{\mathbb C}
+\nc{\BQ}{\mathbb Q}
+\nc{\BZ}{\mathbb Z}
+\nc{\BN}{\mathbb N}
+\nc{\BS}{\mathbb S}
+\nc{\Hom}{\on{Hom}}
+\nc{\wt}{\widetilde}
+\nc{\vspan}{\on{span}}
+\nc{\ord}{\on{ord}}
+\nc{\im}{\on{im}}
+\nc{\Mat}{\on{Mat}}
+\nc{\can}{\on{can}}
+\nc{\coker}{\on{coker}}
+\nc{\ev}{\on{ev}}
+\nc{\Tr}{\on{Tr}}
+\nc{\End}{\on{End}}
+\nc{\swap}{\on{swap}}
+\nc{\Set}{\on{Set}}
+\nc{\bC}{{\mathbf C}}
+\nc{\bc}{{\mathbf c}}
+\nc{\bD}{{\mathbf D}}
+\nc{\bd}{{\mathbf d}}
+\nc{\bE}{{\mathbf E}}
+\nc{\be}{{\mathbf e}}
+\nc{\bF}{{\mathbf F}}
+\nc{\bff}{{\mathbf f}}
+\nc{\CE}{\mathcal E}
+\renc{\mod}{\on{-mod}} %Careful - turn this off in a number theory setting
+\newcommand{\spec}{\text{spec}}
+\nc{\adj}{\on{adj}}
+\nc{\tensor}[3]{#1 \underset{#2}\otimes #3}
+\nc{\Nat}{\on{Nat}}
+\nc{\op}{\on{op}}
+\nc{\Funct}{\on{Funct}}
+\nc{\Ob}{\on{Ob}}
+\nc{\fR}{\mathfrak{R}}
+\nc{\Vect}{\on{Vect}}
+\nc{\ns}{\on{non-spec}}
+\nc{\ol}{\overline}
+\nc{\ul}{\underline}
+\nc{\univ}{\on{univ}}
+\nc{\Maps}{\on{Maps}}
+\nc{\bdd}{\on{bdd}}
+\nc{\cont}{\on{cont}}
+\nc{\Sym}{\on{Sym}}
+\nc{\vol}{\on{vol}}
+\nc{\supp}{\on{supp}}
+\nc{\Lie}{\on{Lie}}
+\nc{\master}{\on{master}}
+\nc{\pt}{\on{pt}}
+\nc{\p}{\mathcal P}
+
+\title{M11482 Problem Set $4 + 5$}%Change the PSet number as needed.
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Leo Alcock, Luis Alvernaz}
+\centerline{\href{mailto:M11482-teachers@esp.mit.edu}{{\tt M1182-teachers@esp.mit.edu}}}
+\vspace*{0.15in}
+\centerline{{\it Problems marked with * are more difficult; we think...}}
+\vspace*{0.25in}
+
+Hello kiddos ~. I (Leo) will be very busy this next week so I'm making a big hard problem set which will be due the last class (two week problem set). There are $2$ challenge problems which I will see if I can get the hssp directors to authorize cash prizes for. We will discuss one of the two challenge problems next class and thus all points related to that problem will be awarded that class (so you must submit partial solutions/ideas by next class)\footnote{which problem we'll discuss won't be announced so you should submit partial solutions for both before next class}. On
+the last class we'll discuss the other problem (probably) and give out prizes/monies. We encourage working with others on this! Others is not the same as stackoverflow/online chat groups (those will be considered cheating and you shall get negative uncountably many points). And as always, do any of the problems you wanna do. 
+
+
+
+
+\medskip
+
+\noindent{{\bf 1. Continuity Continuity} Show that a composition of two continuous maps is itself continuous.}
+
+\medskip
+
+\noindent{{\bf 2.Continuity and closedness} Show a map $f$ from $X$ to $Y$ is continuous if and only for every closed subset $C\subset Y$, $f^{-1}(C)\subset X$ is also closed.}
+
+\medskip
+
+\noindent{{\bf 3.Homeomorphism} Given homeomorphism $f: (X,\tau_X)\rightarrow (Y,\tau_Y)$. Show that $f$ is a bijection of $\tau_X$ and $\tau_Y$ that commutes with the following operations: $\displaystyle f(\bigcup_\alpha U_\alpha) = \bigcup_\alpha f(U_\alpha)$ and $\displaystyle f(\bigcap_1^n U_i) = \bigcap_1^n f(U_i)$.}
+
+\medskip
+
+\noindent{{\bf 4.Homeomorphisms and disjoint unions} Given two spaces $(X,\tau)$ and $(Y,\tau')$ we can take their disjoint union to get a third space $Z = X\coprod Y$. The topology on $Z$ would be the same as if you put two different spaces "next to each other". In formal terms you get $\tau_Z = \{U\coprod V |U \in \tau, V\in \tau'\}$}. Find a topological space $A$ such that $A$ is homeomorphic to $A\coprod A$.
+
+\medskip
+
+\noindent{{\bf 5*. Continuous bijections and homeomorphisms} We talked about how continuous bijections are not always homeomorphisms in class (e.g. the map from a half open interval to a circle). Suppose we have two spaces which \textbf{are} homeomorphic (there exists a homeomorphism between the two). Are all continuous bijections between the two spaces necessarily homeomorphisms? If so, prove it. If not, provide a counterexample.}
+
+\medskip
+
+\noindent{{\bf 6. Connected subsets of $\BR$} Suppose $X\subset \BR$ is a subspace. Given $a,b \in X$ and $z\not\in X$ such that $a < z < b$ show that $X$ is not connected (hint: give a separation that is induced from open sets in $\BR$ (remember how subspaces are defined)). }
+
+\medskip
+
+\noindent{{\bf 7. Path connected} A topological space is said to be \textit{path connected} if for all points $p,q \in X$ there exists a continuous function $f: [0,1] \rightarrow X$ such that $f(0) = p$ and $f(1) = q$ (i.e. there is a path between all pairs of points). Show that path connected implies connected. }
+
+\medskip
+
+\noindent{{\bf 8***. Challenge problem 1} How many distinct\footnote{up to homeomorphism} topological spaces are there on $\BN$?
+
+Note that we have established an upperbound in class of $\p (\p (\BN))$ using the fact that and topology $\tau$ is a subset of $\p (\BN))$. We thus
+know that the answer is in the following range: $$ 0 < \BN < \p (\BN) < \p ( \p (\BN))$$}. Every lower bound push you make, you will receive $1$ point. Every upper bound push you make you will receive $2$ points. E.G. If you prove that their are at least countably many spaces and at most uncountably many, you will receive $1 + 2 = 3$ points. Similarly, if you only prove there are at least uncountably many spaces and nothing else you will get $2$ points. If you prove a totally tight bound, in that you solve the problem, you will get $5$ points. 
+
+\medskip
+
+\noindent{{\bf 9***. Challenge problem 2} How many distinct Hausdorff spaces are there on $\BN$?}
+
+The point system works identically as the problem above.
+
+Additional points may be awarded for good ideas/attempts (since these are difficult problems).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
